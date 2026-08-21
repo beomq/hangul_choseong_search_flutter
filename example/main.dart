@@ -1,73 +1,17 @@
-import 'package:flutter/material.dart';
 import 'package:hangul_choseong_search/hangul_choseong_search.dart';
 
 void main() {
-  runApp(ChoseongSearchExample());
-}
+  const items = ['라면', '리모컨', '로마', '사과Apple'];
 
-class ChoseongSearchExample extends StatelessWidget {
-  @override
-  Widget build(BuildContext context) {
-    return MaterialApp(
-      home: ChoseongSearchScreen(),
-    );
-  }
-}
-
-class ChoseongSearchScreen extends StatefulWidget {
-  @override
-  _ChoseongSearchScreenState createState() => _ChoseongSearchScreenState();
-}
-
-class _ChoseongSearchScreenState extends State<ChoseongSearchScreen> {
-  List<String> items = ['라면', '김치', '사과', '감자'];
-  List<String> filteredItems = [];
-  TextEditingController searchController = TextEditingController();
-
-  @override
-  void initState() {
-    super.initState();
-    filteredItems = items;
-    searchController.addListener(() {
-      setState(() {
-        filteredItems = filterByChoseong(items, searchController.text);
-      });
-    });
+  print('Quick contract:');
+  for (final query in ['ㄹ', '라', '라ㅁ', 'ㅅㄱa']) {
+    print('  "$query" => ${filterByChoseong(items, query)}');
   }
 
-  @override
-  Widget build(BuildContext context) {
-    return Scaffold(
-      appBar: AppBar(
-        title: Text('초성 검색 예제'),
-      ),
-      body: Padding(
-        padding: const EdgeInsets.all(16.0),
-        child: Column(
-          children: [
-            TextField(
-              controller: searchController,
-              decoration: InputDecoration(
-                hintText: '초성 입력...',
-                border: OutlineInputBorder(
-                  borderRadius: BorderRadius.circular(8),
-                ),
-              ),
-            ),
-            SizedBox(height: 16),
-            Expanded(
-              child: ListView.builder(
-                itemCount: filteredItems.length,
-                itemBuilder: (context, index) {
-                  return ListTile(
-                    title: Text(filteredItems[index]),
-                  );
-                },
-              ),
-            ),
-          ],
-        ),
-      ),
-    );
-  }
+  print('\nFocused runnable examples:');
+  print('  dart run example/contact_search.dart');
+  print('  dart run example/product_catalog_search.dart');
+  print('  dart run example/music_search.dart');
+  print('  dart run example/place_restaurant_search.dart');
+  print('  dart run example/typed_domain_search.dart');
 }
