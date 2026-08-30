@@ -201,6 +201,10 @@ svg {
   letter-spacing: -0.07em;
 }
 
+.keep-word {
+  white-space: nowrap;
+}
+
 .hero-accent {
   position: relative;
   color: var(--blue);
