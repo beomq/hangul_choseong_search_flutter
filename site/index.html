@@ -1,0 +1,347 @@
+<!doctype html>
+<html lang="ko">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta
+      name="description"
+      content="Dart와 Flutter를 위한 빠르고 정확한 한글 초성 검색 패키지, hangul_choseong_search를 직접 체험해 보세요."
+    />
+    <meta name="theme-color" content="#f5f3ee" />
+    <meta property="og:title" content="Hangul Choseong Search" />
+    <meta
+      property="og:description"
+      content="한글 검색의 시작을 더 가볍게. 의존성 없는 Pure Dart 초성 검색."
+    />
+    <title>Hangul Choseong Search — 초성 검색, 단 1줄로</title>
+    <link
+      rel="icon"
+      href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 64 64'%3E%3Crect width='64' height='64' rx='18' fill='%231f5eff'/%3E%3Cpath d='M17 18h30v8H35v20h-8V26H17z' fill='white'/%3E%3C/svg%3E"
+    />
+    <link rel="stylesheet" href="styles.css" />
+    <script defer src="app.js"></script>
+  </head>
+  <body>
+    <div class="page-noise" aria-hidden="true"></div>
+    <header class="site-header">
+      <a class="brand" href="#top" aria-label="Hangul Choseong Search 홈">
+        <span class="brand-mark" aria-hidden="true">ㅎ</span>
+        <span class="brand-name">hangul<span>_search</span></span>
+      </a>
+      <nav class="site-nav" aria-label="주요 메뉴">
+        <a href="#playground">Playground</a>
+        <a href="#features">Features</a>
+        <a href="#quick-start">Quick start</a>
+      </nav>
+      <a
+        class="header-github"
+        href="https://github.com/beomq/hangul_choseong_search_flutter"
+        target="_blank"
+        rel="noreferrer"
+      >
+        <svg viewBox="0 0 24 24" aria-hidden="true">
+          <path
+            d="M12 .7a11.5 11.5 0 0 0-3.64 22.41c.58.1.79-.25.79-.56v-2.23c-3.22.7-3.9-1.37-3.9-1.37-.52-1.34-1.28-1.7-1.28-1.7-1.05-.72.08-.7.08-.7 1.16.08 1.77 1.19 1.77 1.19 1.03 1.77 2.7 1.26 3.36.96.1-.75.4-1.26.73-1.55-2.57-.29-5.28-1.29-5.28-5.69 0-1.26.45-2.28 1.19-3.09-.12-.29-.52-1.46.11-3.05 0 0 .97-.31 3.16 1.18a10.9 10.9 0 0 1 5.76 0c2.19-1.49 3.16-1.18 3.16-1.18.63 1.59.23 2.76.11 3.05.74.81 1.19 1.83 1.19 3.09 0 4.42-2.71 5.4-5.29 5.69.42.36.78 1.06.78 2.14v3.17c0 .31.21.67.8.56A11.5 11.5 0 0 0 12 .7Z"
+          />
+        </svg>
+        GitHub
+      </a>
+    </header>
+
+    <main id="top">
+      <section class="hero section-shell">
+        <div class="hero-copy">
+          <div class="eyebrow">
+            <span class="status-dot"></span>
+            Pure Dart · Zero dependencies · v0.1.0
+          </div>
+          <h1>
+            한글 검색의 시작을<br />
+            <span class="hero-accent">더 가볍게.</span>
+          </h1>
+          <p class="hero-lead">
+            사용자가 이름을 전부 기억하지 못해도 괜찮아요.<br />
+            초성만으로 빠르고 정확하게 찾는 검색 경험을 시작하세요.
+          </p>
+          <div class="hero-actions">
+            <a class="button button-primary" href="#playground">
+              지금 검색해 보기
+              <svg viewBox="0 0 20 20" aria-hidden="true">
+                <path d="m7 4 6 6-6 6" />
+              </svg>
+            </a>
+            <div class="install-pill">
+              <code>dart pub add hangul_choseong_search</code>
+              <button
+                id="copy-install"
+                type="button"
+                aria-label="설치 명령어 복사"
+                title="설치 명령어 복사"
+              >
+                <svg viewBox="0 0 20 20" aria-hidden="true">
+                  <rect x="6.5" y="6.5" width="9" height="9" rx="2" />
+                  <path d="M4.5 13.5h-1v-9a1 1 0 0 1 1-1h9v1" />
+                </svg>
+                <span class="copy-label">복사</span>
+              </button>
+            </div>
+          </div>
+          <dl class="hero-stats">
+            <div>
+              <dt>0</dt>
+              <dd>runtime dependencies</dd>
+            </div>
+            <div>
+              <dt>4</dt>
+              <dd>simple APIs</dd>
+            </div>
+            <div>
+              <dt>O(nm)</dt>
+              <dd>worst-case search</dd>
+            </div>
+          </dl>
+        </div>
+
+        <div class="hero-visual" aria-hidden="true">
+          <div class="orbit orbit-one"></div>
+          <div class="orbit orbit-two"></div>
+          <div class="letter-cloud letter-one">ㄱ</div>
+          <div class="letter-cloud letter-two">ㅅ</div>
+          <div class="letter-cloud letter-three">ㅁ</div>
+          <div class="search-preview">
+            <div class="preview-topbar">
+              <span></span><span></span><span></span>
+              <p>choseong_search.dart</p>
+            </div>
+            <div class="preview-code">
+              <p><span class="code-purple">final</span> contacts = [</p>
+              <p>&nbsp;&nbsp;<span class="code-green">'김민수'</span>,</p>
+              <p>&nbsp;&nbsp;<span class="code-green">'박서준'</span>,</p>
+              <p>&nbsp;&nbsp;<span class="code-green">'이도현'</span>,</p>
+              <p>];</p>
+              <br />
+              <p>
+                <span class="code-purple">final</span> result =
+                <span class="code-blue">filterByChoseong</span>(
+              </p>
+              <p>&nbsp;&nbsp;contacts, <span class="code-green">'ㄱㅁㅅ'</span>,</p>
+              <p>);</p>
+            </div>
+            <div class="preview-result">
+              <span class="preview-check">✓</span>
+              <div>
+                <small>RESULT · 1 MATCH</small>
+                <strong>김민수</strong>
+              </div>
+              <span class="preview-time">0.08ms</span>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <section id="playground" class="playground-section section-shell">
+        <div class="section-heading">
+          <div>
+            <p class="section-kicker">LIVE PLAYGROUND</p>
+            <h2>검색은 직접 해봐야<br />느낌이 오니까.</h2>
+          </div>
+          <p>
+            아래 입력창에 <strong>ㄱㅁㅅ</strong>, <strong>ㅅㄱa</strong>,
+            <strong>ㄹㅁ</strong>처럼 입력해 보세요. 이 페이지는 실제 패키지 API로
+            결과를 계산합니다.
+          </p>
+        </div>
+
+        <div class="playground-card">
+          <div class="playground-toolbar">
+            <div class="window-dots" aria-hidden="true">
+              <span></span><span></span><span></span>
+            </div>
+            <p>Interactive demo</p>
+            <span class="live-badge"><i></i> LIVE</span>
+          </div>
+          <div class="playground-body">
+            <div class="search-control">
+              <svg viewBox="0 0 24 24" aria-hidden="true">
+                <circle cx="11" cy="11" r="6.5" />
+                <path d="m16 16 4 4" />
+              </svg>
+              <label class="sr-only" for="search-input">초성 또는 검색어</label>
+              <input
+                id="search-input"
+                type="search"
+                value="ㄱㅁㅅ"
+                placeholder="초성 또는 단어를 입력하세요"
+                autocomplete="off"
+                spellcheck="false"
+              />
+              <kbd>⌘ K</kbd>
+              <button id="clear-search" type="button" aria-label="검색어 지우기">
+                ×
+              </button>
+            </div>
+            <div class="query-presets" aria-label="검색어 예시">
+              <span>Try</span>
+              <button type="button" data-query="ㄱㅁㅅ">ㄱㅁㅅ</button>
+              <button type="button" data-query="ㅂㅅㅈ">ㅂㅅㅈ</button>
+              <button type="button" data-query="ㅅㄱa">ㅅㄱa</button>
+              <button type="button" data-query="카페">카페</button>
+              <button type="button" data-query="">전체</button>
+            </div>
+            <div class="results-meta">
+              <p id="results-status" aria-live="polite"></p>
+              <span>contiguous · case-insensitive ASCII</span>
+            </div>
+            <div id="search-results" class="search-results"></div>
+          </div>
+          <div class="playground-footer">
+            <span>Powered by</span>
+            <code>filterByChoseongKey()</code>
+            <span class="footer-divider"></span>
+            <span>입력할 때마다 즉시 계산됩니다</span>
+          </div>
+        </div>
+      </section>
+
+      <section id="features" class="rules-section section-shell">
+        <div class="section-heading compact">
+          <div>
+            <p class="section-kicker">CLEAR BY DESIGN</p>
+            <h2>예측 가능한 규칙.<br />놀랍도록 쉬운 적용.</h2>
+          </div>
+          <p>
+            과한 추측 없이, 입력한 그대로 동작합니다. 검색 UX에 필요한 핵심만
+            작고 분명하게 담았습니다.
+          </p>
+        </div>
+
+        <div class="rule-grid">
+          <article class="rule-card rule-blue">
+            <span class="rule-number">01</span>
+            <div class="rule-visual">
+              <span>ㄹ</span>
+              <svg viewBox="0 0 48 20" aria-hidden="true">
+                <path d="M1 10h42m-7-7 7 7-7 7" />
+              </svg>
+              <div><b>라</b><b>리</b><b>로</b></div>
+            </div>
+            <h3>초성은 유연하게</h3>
+            <p><code>ㄹ</code>은 라면, 리모컨, 로마처럼 같은 초성의 음절을 찾습니다.</p>
+          </article>
+          <article class="rule-card rule-dark">
+            <span class="rule-number">02</span>
+            <div class="rule-visual">
+              <span>라</span>
+              <svg viewBox="0 0 48 20" aria-hidden="true">
+                <path d="M1 10h42m-7-7 7 7-7 7" />
+              </svg>
+              <div><b>라면</b></div>
+            </div>
+            <h3>완성형은 정확하게</h3>
+            <p><code>라</code>는 '라' 음절 그대로 일치합니다. 규칙이 명확해 결과를 믿을 수 있어요.</p>
+          </article>
+          <article class="rule-card rule-lime">
+            <span class="rule-number">03</span>
+            <div class="rule-visual">
+              <span>ㅅㄱa</span>
+              <svg viewBox="0 0 48 20" aria-hidden="true">
+                <path d="M1 10h42m-7-7 7 7-7 7" />
+              </svg>
+              <div><b>사과Apple</b></div>
+            </div>
+            <h3>한글과 영문을 함께</h3>
+            <p>한글 초성과 ASCII 문자를 섞어도 자연스럽게 연속 검색할 수 있습니다.</p>
+          </article>
+        </div>
+      </section>
+
+      <section id="quick-start" class="quick-start-section">
+        <div class="section-shell quick-start-inner">
+          <div class="quick-copy">
+            <p class="section-kicker light">READY IN MINUTES</p>
+            <h2>한 줄로 설치하고,<br />세 줄로 검색하세요.</h2>
+            <p>
+              Dart와 Flutter 어디서든 같은 API를 사용합니다. 네트워크 요청도,
+              별도 인덱스도 필요 없어요.
+            </p>
+            <a
+              href="https://pub.dev/packages/hangul_choseong_search"
+              target="_blank"
+              rel="noreferrer"
+              class="text-link"
+            >
+              pub.dev에서 문서 보기
+              <svg viewBox="0 0 20 20" aria-hidden="true"><path d="m7 4 6 6-6 6" /></svg>
+            </a>
+          </div>
+          <div class="code-panel">
+            <div class="code-panel-header">
+              <div>
+                <span></span><span></span><span></span>
+              </div>
+              <p>main.dart</p>
+              <button id="copy-code" type="button" aria-label="예제 코드 복사">
+                <svg viewBox="0 0 20 20" aria-hidden="true">
+                  <rect x="6.5" y="6.5" width="9" height="9" rx="2" />
+                  <path d="M4.5 13.5h-1v-9a1 1 0 0 1 1-1h9v1" />
+                </svg>
+                <span>Copy</span>
+              </button>
+            </div>
+            <pre><code id="quick-code"><span class="code-purple">import</span> <span class="code-green">'package:hangul_choseong_search/</span>
+    <span class="code-green">hangul_choseong_search.dart'</span>;
+
+<span class="code-purple">final</span> names = [<span class="code-green">'김민수'</span>, <span class="code-green">'박서준'</span>, <span class="code-green">'이도현'</span>];
+
+<span class="code-purple">final</span> result = <span class="code-blue">filterByChoseong</span>(
+  names,
+  <span class="code-green">'ㄱㅁㅅ'</span>,
+);
+
+<span class="code-comment">// [김민수]</span>
+<span class="code-blue">print</span>(result);</code></pre>
+          </div>
+        </div>
+      </section>
+
+      <section class="final-cta section-shell">
+        <div class="cta-mark" aria-hidden="true">ㅎ</div>
+        <p class="section-kicker">START SEARCHING</p>
+        <h2>기억은 흐릿해도,<br />검색은 정확하게.</h2>
+        <p>당신의 다음 Dart · Flutter 프로젝트에 더 나은 한글 검색 경험을 더하세요.</p>
+        <div class="cta-actions">
+          <a
+            class="button button-primary"
+            href="https://pub.dev/packages/hangul_choseong_search"
+            target="_blank"
+            rel="noreferrer"
+          >
+            pub.dev에서 시작하기
+            <svg viewBox="0 0 20 20" aria-hidden="true"><path d="m7 4 6 6-6 6" /></svg>
+          </a>
+          <a
+            class="button button-secondary"
+            href="https://github.com/beomq/hangul_choseong_search_flutter"
+            target="_blank"
+            rel="noreferrer"
+          >
+            GitHub 보기
+          </a>
+        </div>
+      </section>
+    </main>
+
+    <footer class="site-footer section-shell">
+      <a class="brand" href="#top">
+        <span class="brand-mark small" aria-hidden="true">ㅎ</span>
+        <span class="brand-name">hangul<span>_search</span></span>
+      </a>
+      <p>Built for the Korean search experience.</p>
+      <div>
+        <a href="https://pub.dev/packages/hangul_choseong_search">pub.dev</a>
+        <a href="https://github.com/beomq/hangul_choseong_search_flutter">GitHub</a>
+        <a href="https://github.com/beomq/hangul_choseong_search_flutter/issues">Issues</a>
+      </div>
+    </footer>
+  </body>
+</html>
