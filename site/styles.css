@@ -155,9 +155,9 @@ svg {
   min-height: 730px;
   padding: 72px 0 96px;
   display: grid;
-  grid-template-columns: 1.03fr 0.97fr;
+  grid-template-columns: 1.06fr 0.94fr;
   align-items: center;
-  gap: 60px;
+  gap: 48px;
 }
 
 .hero-copy {
@@ -196,7 +196,7 @@ svg {
 
 .hero h1 {
   margin: 28px 0 22px;
-  font-size: clamp(54px, 6.2vw, 84px);
+  font-size: clamp(54px, 6.2vw, 80px);
   line-height: 1.05;
   letter-spacing: -0.07em;
 }
