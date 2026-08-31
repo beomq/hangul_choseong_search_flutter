@@ -1,7 +1,7 @@
 name: hangul_choseong_search
 description: Choseong extraction and contiguous initial consonant search for modern Korean Hangul strings in pure Dart.
 version: 0.1.0
-homepage: https://github.com/beomq/hangul_choseong_search_flutter
+homepage: https://beomq.github.io/hangul_choseong_search_flutter/
 repository: https://github.com/beomq/hangul_choseong_search_flutter
 issue_tracker: https://github.com/beomq/hangul_choseong_search_flutter/issues
 topics:

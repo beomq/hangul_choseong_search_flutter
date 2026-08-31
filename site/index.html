@@ -30,6 +30,7 @@
       </a>
       <nav class="site-nav" aria-label="주요 메뉴">
         <a href="#playground">Playground</a>
+        <a href="#global-teams">Global teams</a>
         <a href="#features">Features</a>
         <a href="#quick-start">Quick start</a>
       </nav>
@@ -63,6 +64,13 @@
             사용자가 이름을 전부 기억하지 못해도 괜찮아요.<br />
             초성만으로 빠르고 정확하게 찾는 검색 경험을 시작하세요.
           </p>
+          <a class="global-jump" href="#global-teams">
+            <span>EN</span>
+            New to choseong? See why it matters when launching in Korea.
+            <svg viewBox="0 0 20 20" aria-hidden="true">
+              <path d="m7 4 6 6-6 6" />
+            </svg>
+          </a>
           <div class="hero-actions">
             <a class="button button-primary" href="#playground">
               지금 검색해 보기
@@ -199,6 +207,101 @@
             <code>filterByChoseongKey()</code>
             <span class="footer-divider"></span>
             <span>입력할 때마다 즉시 계산됩니다</span>
+          </div>
+        </div>
+      </section>
+
+      <section id="global-teams" class="global-section section-shell">
+        <div class="global-shell">
+          <div class="global-heading">
+            <div>
+              <p class="section-kicker light">FOR GLOBAL TEAMS</p>
+              <h2>
+                Launching in Korea?<br />
+                <span>Search the way Korean users type.</span>
+              </h2>
+            </div>
+            <div class="global-intro">
+              <p>
+                Choseong search is a familiar Korean shortcut. Users enter only
+                the leading consonants they remember, and your product finds
+                the complete Korean name — fast, local, and intuitive.
+              </p>
+              <a href="#playground">
+                Try the live playground
+                <svg viewBox="0 0 20 20" aria-hidden="true">
+                  <path d="m7 4 6 6-6 6" />
+                </svg>
+              </a>
+            </div>
+          </div>
+
+          <div class="global-content">
+            <article class="global-demo-card">
+              <div class="global-demo-top">
+                <span>KOREAN SEARCH PATTERN</span>
+                <span><i></i> LIVE EXAMPLE</span>
+              </div>
+              <p class="global-demo-label">The user remembers only the initials</p>
+              <div class="global-query">
+                <strong>ㄱㅁㅅ</strong>
+                <div>
+                  <span>Three leading consonants</span>
+                  <small>giyeok · mieum · siot</small>
+                </div>
+              </div>
+              <div class="global-arrow" aria-hidden="true">
+                <span></span>
+                <svg viewBox="0 0 20 20">
+                  <path d="m7 4 6 6-6 6" />
+                </svg>
+              </div>
+              <div class="global-result">
+                <span class="global-avatar">김</span>
+                <div>
+                  <small>1 MATCH FOUND</small>
+                  <strong>김민수 <em>Kim Min-su</em></strong>
+                </div>
+                <span class="global-check">✓</span>
+              </div>
+              <p class="global-demo-note">
+                No full spelling required. Each initial maps to the first
+                consonant of a Korean syllable.
+              </p>
+            </article>
+
+            <div class="global-use-cases">
+              <article>
+                <span>01</span>
+                <div>
+                  <h3>A search habit users already know</h3>
+                  <p>
+                    Korean users commonly reach for initials when a name or
+                    title is familiar but the exact spelling is not.
+                  </p>
+                </div>
+              </article>
+              <article>
+                <span>02</span>
+                <div>
+                  <h3>Useful across everyday product search</h3>
+                  <p>
+                    Add it to contacts, member pickers, places, restaurants,
+                    music libraries, product catalogs, and command palettes.
+                  </p>
+                </div>
+              </article>
+              <article>
+                <span>03</span>
+                <div>
+                  <h3>Localized UX without extra infrastructure</h3>
+                  <p>
+                    Keep matching in your Dart or Flutter app with zero runtime
+                    dependencies and no separate search service.
+                  </p>
+                </div>
+              </article>
+            </div>
           </div>
         </div>
       </section>

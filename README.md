@@ -2,6 +2,27 @@
 
 `hangul_choseong_search` is a pure Dart package for choseong (initial consonant) search in Korean text. It works in Dart and Flutter apps and has no runtime dependencies.
 
+**[Try the interactive demo](https://beomq.github.io/hangul_choseong_search_flutter/)** — search Korean contacts, places, products, and mixed Korean-English text directly in your browser.
+
+## Building a product for Korean users?
+
+Choseong search is a familiar shortcut in Korean search experiences. Instead of typing every syllable, users can enter only the leading consonants they remember. For example, `ㄱㅁㅅ` can find `김민수`.
+
+This interaction is especially useful when launching or localizing a service for Korea:
+
+* Contact and member pickers
+* Place, restaurant, and store search
+* Music, media, and content libraries
+* Product catalogs and command palettes
+
+| Query | Candidate | Why it matches |
+| --- | --- | --- |
+| `ㄱㅁㅅ` | `김민수` | Each standalone initial matches the corresponding Hangul syllable. |
+| `ㅋㅍ` | `성수 카페` | Matching can begin at any contiguous position in the candidate. |
+| `ㅅㄱa` | `사과Apple` | Korean initials and ASCII text can be combined in one query. |
+
+The package keeps this behavior client-side, deterministic, and dependency-free, so global teams can add a Korean-native search pattern without operating a separate search service. See the [live English guide and playground](https://beomq.github.io/hangul_choseong_search_flutter/#global-teams) for a visual explanation.
+
 ## What is choseong search?
 
 A modern Hangul syllable is a block built from an initial consonant, a vowel, and sometimes a final consonant. For example, `라` starts with `ㄹ`, while `면` starts with `ㅁ`. A choseong query can search for those initials without spelling the full syllables.
@@ -206,6 +227,8 @@ Bug reports and feature discussions belong in the [GitHub issue tracker](https:/
 ## 한국어 빠른 참고
 
 `hangul_choseong_search` 0.1.0은 Dart와 Flutter에서 쓸 수 있는 순수 Dart 초성 검색 패키지입니다.
+
+한국 사용자를 위한 연락처, 장소, 음악, 상품 검색을 만들고 있다면 [소개 페이지와 라이브 데모](https://beomq.github.io/hangul_choseong_search_flutter/)에서 실제 동작을 확인할 수 있습니다.
 
 ```dart
 import 'package:hangul_choseong_search/hangul_choseong_search.dart';
