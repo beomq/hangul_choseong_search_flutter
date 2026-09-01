@@ -21,7 +21,7 @@ This interaction is especially useful when launching or localizing a service for
 | `ㅋㅍ` | `성수 카페` | Matching can begin at any contiguous position in the candidate. |
 | `ㅅㄱa` | `사과Apple` | Korean initials and ASCII text can be combined in one query. |
 
-The package keeps this behavior client-side, deterministic, and dependency-free, so global teams can add a Korean-native search pattern without operating a separate search service. See the [live English guide and playground](https://beomq.github.io/hangul_choseong_search_flutter/#global-teams) for a visual explanation.
+The package keeps this behavior client-side, deterministic, and dependency-free, so teams can add a Korean-native search pattern without operating a separate search service. See the [bilingual live guide and playground](https://beomq.github.io/hangul_choseong_search_flutter/#global-teams), where you can switch between Korean and English.
 
 ## What is choseong search?
 
@@ -228,7 +228,7 @@ Bug reports and feature discussions belong in the [GitHub issue tracker](https:/
 
 `hangul_choseong_search` 0.1.0은 Dart와 Flutter에서 쓸 수 있는 순수 Dart 초성 검색 패키지입니다.
 
-한국 사용자를 위한 연락처, 장소, 음악, 상품 검색을 만들고 있다면 [소개 페이지와 라이브 데모](https://beomq.github.io/hangul_choseong_search_flutter/)에서 실제 동작을 확인할 수 있습니다.
+한국 사용자를 위한 연락처, 장소, 음악, 상품 검색을 만들고 있다면 [소개 페이지와 라이브 데모](https://beomq.github.io/hangul_choseong_search_flutter/)에서 한국어와 English 가이드를 선택해 실제 동작을 확인할 수 있습니다.
 
 ```dart
 import 'package:hangul_choseong_search/hangul_choseong_search.dart';

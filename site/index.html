@@ -4,14 +4,22 @@
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <meta
+      id="meta-description"
       name="description"
       content="Dart와 Flutter를 위한 빠르고 정확한 한글 초성 검색 패키지, hangul_choseong_search를 직접 체험해 보세요."
     />
     <meta name="theme-color" content="#f5f3ee" />
     <meta property="og:title" content="Hangul Choseong Search" />
     <meta
+      id="meta-og-description"
       property="og:description"
-      content="한글 검색의 시작을 더 가볍게. 의존성 없는 Pure Dart 초성 검색."
+      content="한글 검색의 시작을 더 가볍게. 실행 의존성 없는 순수 Dart 초성 검색."
+    />
+    <meta id="meta-og-locale" property="og:locale" content="ko_KR" />
+    <meta
+      id="meta-og-locale-alternate"
+      property="og:locale:alternate"
+      content="en_US"
     />
     <title>Hangul Choseong Search — 초성 검색, 단 1줄로</title>
     <link
@@ -24,29 +32,50 @@
   <body>
     <div class="page-noise" aria-hidden="true"></div>
     <header class="site-header">
-      <a class="brand" href="#top" aria-label="Hangul Choseong Search 홈">
+      <a
+        class="brand"
+        href="#top"
+        aria-label="Hangul Choseong Search 홈"
+        data-ko-aria-label="Hangul Choseong Search 홈"
+        data-en-aria-label="Hangul Choseong Search home"
+      >
         <span class="brand-mark" aria-hidden="true">ㅎ</span>
         <span class="brand-name">hangul<span>_search</span></span>
       </a>
-      <nav class="site-nav" aria-label="주요 메뉴">
-        <a href="#playground">Playground</a>
-        <a href="#global-teams">Global teams</a>
-        <a href="#features">Features</a>
-        <a href="#quick-start">Quick start</a>
-      </nav>
-      <a
-        class="header-github"
-        href="https://github.com/beomq/hangul_choseong_search_flutter"
-        target="_blank"
-        rel="noreferrer"
+      <nav
+        class="site-nav"
+        aria-label="주요 메뉴"
+        data-ko-aria-label="주요 메뉴"
+        data-en-aria-label="Main navigation"
       >
-        <svg viewBox="0 0 24 24" aria-hidden="true">
-          <path
-            d="M12 .7a11.5 11.5 0 0 0-3.64 22.41c.58.1.79-.25.79-.56v-2.23c-3.22.7-3.9-1.37-3.9-1.37-.52-1.34-1.28-1.7-1.28-1.7-1.05-.72.08-.7.08-.7 1.16.08 1.77 1.19 1.77 1.19 1.03 1.77 2.7 1.26 3.36.96.1-.75.4-1.26.73-1.55-2.57-.29-5.28-1.29-5.28-5.69 0-1.26.45-2.28 1.19-3.09-.12-.29-.52-1.46.11-3.05 0 0 .97-.31 3.16 1.18a10.9 10.9 0 0 1 5.76 0c2.19-1.49 3.16-1.18 3.16-1.18.63 1.59.23 2.76.11 3.05.74.81 1.19 1.83 1.19 3.09 0 4.42-2.71 5.4-5.29 5.69.42.36.78 1.06.78 2.14v3.17c0 .31.21.67.8.56A11.5 11.5 0 0 0 12 .7Z"
-          />
-        </svg>
-        GitHub
-      </a>
+        <a href="#playground" data-ko="체험하기" data-en="Try it">체험하기</a>
+        <a href="#global-teams" data-ko="활용 사례" data-en="Use cases">활용 사례</a>
+        <a href="#features" data-ko="주요 기능" data-en="Features">주요 기능</a>
+        <a href="#quick-start" data-ko="빠른 시작" data-en="Quick start">빠른 시작</a>
+      </nav>
+      <div class="header-actions">
+        <div class="locale-switcher" role="group" aria-label="언어 선택">
+          <button type="button" data-locale="ko" aria-pressed="true">
+            한국어
+          </button>
+          <button type="button" data-locale="en" aria-pressed="false">
+            EN
+          </button>
+        </div>
+        <a
+          class="header-github"
+          href="https://github.com/beomq/hangul_choseong_search_flutter"
+          target="_blank"
+          rel="noreferrer"
+        >
+          <svg viewBox="0 0 24 24" aria-hidden="true">
+            <path
+              d="M12 .7a11.5 11.5 0 0 0-3.64 22.41c.58.1.79-.25.79-.56v-2.23c-3.22.7-3.9-1.37-3.9-1.37-.52-1.34-1.28-1.7-1.28-1.7-1.05-.72.08-.7.08-.7 1.16.08 1.77 1.19 1.77 1.19 1.03 1.77 2.7 1.26 3.36.96.1-.75.4-1.26.73-1.55-2.57-.29-5.28-1.29-5.28-5.69 0-1.26.45-2.28 1.19-3.09-.12-.29-.52-1.46.11-3.05 0 0 .97-.31 3.16 1.18a10.9 10.9 0 0 1 5.76 0c2.19-1.49 3.16-1.18 3.16-1.18.63 1.59.23 2.76.11 3.05.74.81 1.19 1.83 1.19 3.09 0 4.42-2.71 5.4-5.29 5.69.42.36.78 1.06.78 2.14v3.17c0 .31.21.67.8.56A11.5 11.5 0 0 0 12 .7Z"
+            />
+          </svg>
+          GitHub
+        </a>
+      </div>
     </header>
 
     <main id="top">
@@ -54,26 +83,46 @@
         <div class="hero-copy">
           <div class="eyebrow">
             <span class="status-dot"></span>
-            Pure Dart · Zero dependencies · v0.1.0
+            <span
+              data-ko="순수 Dart · 실행 의존성 없음 · v0.1.0"
+              data-en="Pure Dart · Zero runtime dependencies · v0.1.0"
+            >순수 Dart · 실행 의존성 없음 · v0.1.0</span>
           </div>
           <h1>
-            <span class="keep-word">한글 검색의 시작을</span><br />
-            <span class="hero-accent">더 가볍게.</span>
+            <span
+              class="keep-word"
+              data-ko="한글 검색의 시작을"
+              data-en="Make Korean search"
+            >한글 검색의 시작을</span><br />
+            <span
+              class="hero-accent"
+              data-ko="더 가볍게."
+              data-en="simpler."
+            >더 가볍게.</span>
           </h1>
           <p class="hero-lead">
-            사용자가 이름을 전부 기억하지 못해도 괜찮아요.<br />
-            초성만으로 빠르고 정확하게 찾는 검색 경험을 시작하세요.
+            <span
+              data-ko="사용자가 이름을 전부 기억하지 못해도 괜찮아요."
+              data-en="Users don't need to remember the full name."
+            >사용자가 이름을 전부 기억하지 못해도 괜찮아요.</span><br />
+            <span
+              data-ko="초성만으로 빠르고 정확하게 찾는 검색 경험을 시작하세요."
+              data-en="Help them find it quickly and accurately using only its initial consonants."
+            >초성만으로 빠르고 정확하게 찾는 검색 경험을 시작하세요.</span>
           </p>
           <a class="global-jump" href="#global-teams">
-            <span>EN</span>
-            New to choseong? See why it matters when launching in Korea.
+            <span data-ko="초성" data-en="Choseong">초성</span>
+            <span
+              data-ko="한국어 검색에서 초성 검색이 중요한 이유를 알아보세요."
+              data-en="See why choseong search matters for Korean users."
+            >한국어 검색에서 초성 검색이 중요한 이유를 알아보세요.</span>
             <svg viewBox="0 0 20 20" aria-hidden="true">
               <path d="m7 4 6 6-6 6" />
             </svg>
           </a>
           <div class="hero-actions">
             <a class="button button-primary" href="#playground">
-              지금 검색해 보기
+              <span data-ko="지금 검색해 보기" data-en="Try searching now">지금 검색해 보기</span>
               <svg viewBox="0 0 20 20" aria-hidden="true">
                 <path d="m7 4 6 6-6 6" />
               </svg>
@@ -85,27 +134,31 @@
                 type="button"
                 aria-label="설치 명령어 복사"
                 title="설치 명령어 복사"
+                data-ko-aria-label="설치 명령어 복사"
+                data-en-aria-label="Copy installation command"
+                data-ko-title="설치 명령어 복사"
+                data-en-title="Copy installation command"
               >
                 <svg viewBox="0 0 20 20" aria-hidden="true">
                   <rect x="6.5" y="6.5" width="9" height="9" rx="2" />
                   <path d="M4.5 13.5h-1v-9a1 1 0 0 1 1-1h9v1" />
                 </svg>
-                <span class="copy-label">복사</span>
+                <span class="copy-label" data-ko="복사" data-en="Copy">복사</span>
               </button>
             </div>
           </div>
           <dl class="hero-stats">
             <div>
               <dt>0</dt>
-              <dd>runtime dependencies</dd>
+              <dd data-ko="실행 의존성" data-en="Runtime dependencies">실행 의존성</dd>
             </div>
             <div>
               <dt>4</dt>
-              <dd>simple APIs</dd>
+              <dd data-ko="간단한 API" data-en="Simple APIs">간단한 API</dd>
             </div>
             <div>
               <dt>O(nm)</dt>
-              <dd>worst-case search</dd>
+              <dd data-ko="최악 검색 복잡도" data-en="Worst-case search">최악 검색 복잡도</dd>
             </div>
           </dl>
         </div>
@@ -138,7 +191,7 @@
             <div class="preview-result">
               <span class="preview-check">✓</span>
               <div>
-                <small>RESULT · 1 MATCH</small>
+                <small data-ko="검색 결과 · 1개" data-en="1 search result">검색 결과 · 1개</small>
                 <strong>김민수</strong>
               </div>
               <span class="preview-time">0.08ms</span>
@@ -150,13 +203,18 @@
       <section id="playground" class="playground-section section-shell">
         <div class="section-heading">
           <div>
-            <p class="section-kicker">LIVE PLAYGROUND</p>
-            <h2>검색은 직접 해봐야<br />느낌이 오니까.</h2>
+            <p class="section-kicker" data-ko="실시간 체험" data-en="Live demo">실시간 체험</p>
+            <h2>
+              <span data-ko="검색은 직접 해봐야" data-en="Search is something">검색은 직접 해봐야</span><br />
+              <span data-ko="느낌이 오니까." data-en="you need to try yourself.">느낌이 오니까.</span>
+            </h2>
           </div>
           <p>
-            아래 입력창에 <strong>ㄱㅁㅅ</strong>, <strong>ㅅㄱa</strong>,
-            <strong>ㄹㅁ</strong>처럼 입력해 보세요. 이 페이지는 실제 패키지 API로
-            결과를 계산합니다.
+            <span data-ko="아래 입력창에 " data-en="Enter ">아래 입력창에 </span><strong>ㄱㅁㅅ</strong>,
+            <strong>ㅅㄱa</strong>, <strong>ㄹㅁ</strong><span
+              data-ko="처럼 입력해 보세요. 이 페이지는 실제 패키지 API로 결과를 계산합니다."
+              data-en=" below. This page calculates results using the actual package API."
+            >처럼 입력해 보세요. 이 페이지는 실제 패키지 API로 결과를 계산합니다.</span>
           </p>
         </div>
 
@@ -165,8 +223,8 @@
             <div class="window-dots" aria-hidden="true">
               <span></span><span></span><span></span>
             </div>
-            <p>Interactive demo</p>
-            <span class="live-badge"><i></i> LIVE</span>
+            <p data-ko="초성 검색 체험" data-en="Choseong search demo">초성 검색 체험</p>
+            <span class="live-badge"><i></i> <span data-ko="실시간" data-en="Live">실시간</span></span>
           </div>
           <div class="playground-body">
             <div class="search-control">
@@ -174,39 +232,63 @@
                 <circle cx="11" cy="11" r="6.5" />
                 <path d="m16 16 4 4" />
               </svg>
-              <label class="sr-only" for="search-input">초성 또는 검색어</label>
+              <label
+                class="sr-only"
+                for="search-input"
+                data-ko="초성 또는 검색어"
+                data-en="Initial consonants or search term"
+              >초성 또는 검색어</label>
               <input
                 id="search-input"
                 type="search"
                 value="ㄱㅁㅅ"
                 placeholder="초성 또는 단어를 입력하세요"
+                data-ko-placeholder="초성 또는 단어를 입력하세요"
+                data-en-placeholder="Enter initial consonants or a word"
                 autocomplete="off"
                 spellcheck="false"
               />
               <kbd>⌘ K</kbd>
-              <button id="clear-search" type="button" aria-label="검색어 지우기">
+              <button
+                id="clear-search"
+                type="button"
+                aria-label="검색어 지우기"
+                data-ko-aria-label="검색어 지우기"
+                data-en-aria-label="Clear search"
+              >
                 ×
               </button>
             </div>
-            <div class="query-presets" aria-label="검색어 예시">
-              <span>Try</span>
+            <div
+              class="query-presets"
+              aria-label="검색어 예시"
+              data-ko-aria-label="검색어 예시"
+              data-en-aria-label="Search examples"
+            >
+              <span data-ko="예시" data-en="Examples">예시</span>
               <button type="button" data-query="ㄱㅁㅅ">ㄱㅁㅅ</button>
               <button type="button" data-query="ㅂㅅㅈ">ㅂㅅㅈ</button>
               <button type="button" data-query="ㅅㄱa">ㅅㄱa</button>
               <button type="button" data-query="카페">카페</button>
-              <button type="button" data-query="">전체</button>
+              <button type="button" data-query="" data-ko="전체" data-en="All">전체</button>
             </div>
             <div class="results-meta">
               <p id="results-status" aria-live="polite"></p>
-              <span>contiguous · case-insensitive ASCII</span>
+              <span
+                data-ko="연속 일치 · ASCII 대소문자 무시"
+                data-en="Consecutive matching · ASCII case insensitive"
+              >연속 일치 · ASCII 대소문자 무시</span>
             </div>
             <div id="search-results" class="search-results"></div>
           </div>
           <div class="playground-footer">
-            <span>Powered by</span>
+            <span data-ko="사용 API" data-en="API used">사용 API</span>
             <code>filterByChoseongKey()</code>
             <span class="footer-divider"></span>
-            <span>입력할 때마다 즉시 계산됩니다</span>
+            <span
+              data-ko="입력할 때마다 즉시 계산됩니다"
+              data-en="Results are calculated as you type"
+            >입력할 때마다 즉시 계산됩니다</span>
           </div>
         </div>
       </section>
@@ -215,20 +297,29 @@
         <div class="global-shell">
           <div class="global-heading">
             <div>
-              <p class="section-kicker light">FOR GLOBAL TEAMS</p>
+              <p
+                class="section-kicker light"
+                data-ko="한국어 서비스 팀을 위해"
+                data-en="Built for teams serving Korean users"
+              >한국어 서비스 팀을 위해</p>
               <h2>
-                Launching in Korea?<br />
-                <span>Search the way Korean users type.</span>
+                <span
+                  data-ko="한국 사용자를 위한 서비스라면,"
+                  data-en="If your service is for Korean users,"
+                >한국 사용자를 위한 서비스라면,</span><br />
+                <span
+                  data-ko="익숙한 방식으로 검색하게 하세요."
+                  data-en="let them search the way they know."
+                >익숙한 방식으로 검색하게 하세요.</span>
               </h2>
             </div>
             <div class="global-intro">
-              <p>
-                Choseong search is a familiar Korean shortcut. Users enter only
-                the leading consonants they remember, and your product finds
-                the complete Korean name — fast, local, and intuitive.
-              </p>
+              <p
+                data-ko="초성 검색은 한국 사용자에게 익숙한 검색 방식입니다. 기억나는 첫 자음만 입력해도 완성된 이름을 빠르고 자연스럽게 찾을 수 있습니다."
+                data-en="Choseong search is familiar to Korean users. They can quickly find a full name by entering only the initial consonants they remember."
+              >초성 검색은 한국 사용자에게 익숙한 검색 방식입니다. 기억나는 첫 자음만 입력해도 완성된 이름을 빠르고 자연스럽게 찾을 수 있습니다.</p>
               <a href="#playground">
-                Try the live playground
+                <span data-ko="실시간으로 체험하기" data-en="Try it live">실시간으로 체험하기</span>
                 <svg viewBox="0 0 20 20" aria-hidden="true">
                   <path d="m7 4 6 6-6 6" />
                 </svg>
@@ -239,15 +330,19 @@
           <div class="global-content">
             <article class="global-demo-card">
               <div class="global-demo-top">
-                <span>KOREAN SEARCH PATTERN</span>
-                <span><i></i> LIVE EXAMPLE</span>
+                <span data-ko="한국어 검색 방식" data-en="Korean search pattern">한국어 검색 방식</span>
+                <span><i></i> <span data-ko="실시간 예시" data-en="Live example">실시간 예시</span></span>
               </div>
-              <p class="global-demo-label">The user remembers only the initials</p>
+              <p
+                class="global-demo-label"
+                data-ko="사용자가 이름의 초성만 기억하는 경우"
+                data-en="When a user remembers only a name's initial consonants"
+              >사용자가 이름의 초성만 기억하는 경우</p>
               <div class="global-query">
                 <strong>ㄱㅁㅅ</strong>
                 <div>
-                  <span>Three leading consonants</span>
-                  <small>giyeok · mieum · siot</small>
+                  <span data-ko="세 개의 첫 자음" data-en="Three initial consonants">세 개의 첫 자음</span>
+                  <small data-ko="기역 · 미음 · 시옷" data-en="Giyeok · Mieum · Siot">기역 · 미음 · 시옷</small>
                 </div>
               </div>
               <div class="global-arrow" aria-hidden="true">
@@ -259,46 +354,50 @@
               <div class="global-result">
                 <span class="global-avatar">김</span>
                 <div>
-                  <small>1 MATCH FOUND</small>
-                  <strong>김민수 <em>Kim Min-su</em></strong>
+                  <small data-ko="일치 결과 1개" data-en="1 matching result">일치 결과 1개</small>
+                  <strong>김민수</strong>
                 </div>
                 <span class="global-check">✓</span>
               </div>
-              <p class="global-demo-note">
-                No full spelling required. Each initial maps to the first
-                consonant of a Korean syllable.
-              </p>
+              <p
+                class="global-demo-note"
+                data-ko="이름을 모두 입력할 필요가 없습니다. 각 초성이 한글 음절의 첫 자음과 일치합니다."
+                data-en="There's no need to enter the full name. Each choseong matches the initial consonant of a Hangul syllable."
+              >이름을 모두 입력할 필요가 없습니다. 각 초성이 한글 음절의 첫 자음과 일치합니다.</p>
             </article>
 
             <div class="global-use-cases">
               <article>
                 <span>01</span>
                 <div>
-                  <h3>A search habit users already know</h3>
-                  <p>
-                    Korean users commonly reach for initials when a name or
-                    title is familiar but the exact spelling is not.
-                  </p>
+                  <h3 data-ko="이미 익숙한 검색 습관" data-en="A familiar search habit">이미 익숙한 검색 습관</h3>
+                  <p
+                    data-ko="이름이나 제목은 익숙하지만 정확히 기억나지 않을 때 한국 사용자는 자연스럽게 초성으로 검색합니다."
+                    data-en="When Korean users recognize a name or title but can't remember it exactly, they naturally search by choseong."
+                  >이름이나 제목은 익숙하지만 정확히 기억나지 않을 때 한국 사용자는 자연스럽게 초성으로 검색합니다.</p>
                 </div>
               </article>
               <article>
                 <span>02</span>
                 <div>
-                  <h3>Useful across everyday product search</h3>
-                  <p>
-                    Add it to contacts, member pickers, places, restaurants,
-                    music libraries, product catalogs, and command palettes.
-                  </p>
+                  <h3 data-ko="다양한 일상 검색에 활용" data-en="Useful across everyday searches">다양한 일상 검색에 활용</h3>
+                  <p
+                    data-ko="연락처, 회원 선택, 장소, 식당, 음악, 상품 목록, 명령 팔레트 등 여러 검색 화면에 적용할 수 있습니다."
+                    data-en="Use it for contacts, member selection, places, restaurants, music, product lists, command palettes, and more."
+                  >연락처, 회원 선택, 장소, 식당, 음악, 상품 목록, 명령 팔레트 등 여러 검색 화면에 적용할 수 있습니다.</p>
                 </div>
               </article>
               <article>
                 <span>03</span>
                 <div>
-                  <h3>Localized UX without extra infrastructure</h3>
-                  <p>
-                    Keep matching in your Dart or Flutter app with zero runtime
-                    dependencies and no separate search service.
-                  </p>
+                  <h3
+                    data-ko="추가 인프라 없는 현지화 경험"
+                    data-en="A localized experience without extra infrastructure"
+                  >추가 인프라 없는 현지화 경험</h3>
+                  <p
+                    data-ko="별도 검색 서비스나 실행 의존성 없이 Dart 또는 Flutter 앱 안에서 바로 검색을 처리합니다."
+                    data-en="Handle search directly inside a Dart or Flutter app, without a separate search service or runtime dependencies."
+                  >별도 검색 서비스나 실행 의존성 없이 Dart 또는 Flutter 앱 안에서 바로 검색을 처리합니다.</p>
                 </div>
               </article>
             </div>
@@ -309,13 +408,16 @@
       <section id="features" class="rules-section section-shell">
         <div class="section-heading compact">
           <div>
-            <p class="section-kicker">CLEAR BY DESIGN</p>
-            <h2>예측 가능한 규칙.<br />놀랍도록 쉬운 적용.</h2>
+            <p class="section-kicker" data-ko="명확한 설계" data-en="Clear by design">명확한 설계</p>
+            <h2>
+              <span data-ko="예측 가능한 규칙." data-en="Predictable rules.">예측 가능한 규칙.</span><br />
+              <span data-ko="놀랍도록 쉬운 적용." data-en="Surprisingly easy to add.">놀랍도록 쉬운 적용.</span>
+            </h2>
           </div>
-          <p>
-            과한 추측 없이, 입력한 그대로 동작합니다. 검색 UX에 필요한 핵심만
-            작고 분명하게 담았습니다.
-          </p>
+          <p
+            data-ko="과한 추측 없이, 입력한 그대로 동작합니다. 검색 경험에 필요한 핵심만 작고 분명하게 담았습니다."
+            data-en="It works exactly as entered, without excessive guesswork. It provides only the small, clear set of essentials needed for search."
+          >과한 추측 없이, 입력한 그대로 동작합니다. 검색 경험에 필요한 핵심만 작고 분명하게 담았습니다.</p>
         </div>
 
         <div class="rule-grid">
@@ -328,8 +430,11 @@
               </svg>
               <div><b>라</b><b>리</b><b>로</b></div>
             </div>
-            <h3>초성은 유연하게</h3>
-            <p><code>ㄹ</code>은 라면, 리모컨, 로마처럼 같은 초성의 음절을 찾습니다.</p>
+            <h3 data-ko="초성은 유연하게" data-en="Flexible choseong matching">초성은 유연하게</h3>
+            <p><code>ㄹ</code><span
+              data-ko="은 라면, 리모컨, 로마처럼 같은 초성의 음절을 찾습니다."
+              data-en=" matches syllables with the same initial consonant, such as 라면, 리모컨, and 로마."
+            >은 라면, 리모컨, 로마처럼 같은 초성의 음절을 찾습니다.</span></p>
           </article>
           <article class="rule-card rule-dark">
             <span class="rule-number">02</span>
@@ -340,8 +445,11 @@
               </svg>
               <div><b>라면</b></div>
             </div>
-            <h3>완성형은 정확하게</h3>
-            <p><code>라</code>는 '라' 음절 그대로 일치합니다. 규칙이 명확해 결과를 믿을 수 있어요.</p>
+            <h3 data-ko="완성형은 정확하게" data-en="Exact syllable matching">완성형은 정확하게</h3>
+            <p><code>라</code><span
+              data-ko="는 '라' 음절 그대로 일치합니다. 규칙이 명확해 결과를 믿을 수 있어요."
+              data-en=" matches the exact syllable “라.” Clear rules make the results dependable."
+            >는 '라' 음절 그대로 일치합니다. 규칙이 명확해 결과를 믿을 수 있어요.</span></p>
           </article>
           <article class="rule-card rule-lime">
             <span class="rule-number">03</span>
@@ -352,8 +460,11 @@
               </svg>
               <div><b>사과Apple</b></div>
             </div>
-            <h3>한글과 영문을 함께</h3>
-            <p>한글 초성과 ASCII 문자를 섞어도 자연스럽게 연속 검색할 수 있습니다.</p>
+            <h3 data-ko="한글과 영문을 함께" data-en="Mix Hangul and Latin characters">한글과 영문을 함께</h3>
+            <p
+              data-ko="한글 초성과 ASCII 문자를 섞어도 자연스럽게 연속 검색할 수 있습니다."
+              data-en="Mix Hangul choseong with ASCII characters for seamless consecutive matching."
+            >한글 초성과 ASCII 문자를 섞어도 자연스럽게 연속 검색할 수 있습니다.</p>
           </article>
         </div>
       </section>
@@ -361,19 +472,22 @@
       <section id="quick-start" class="quick-start-section">
         <div class="section-shell quick-start-inner">
           <div class="quick-copy">
-            <p class="section-kicker light">READY IN MINUTES</p>
-            <h2>한 줄로 <span class="keep-word">설치하고,</span><br />세 줄로 검색하세요.</h2>
-            <p>
-              Dart와 Flutter 어디서든 같은 API를 사용합니다. 네트워크 요청도,
-              별도 인덱스도 필요 없어요.
-            </p>
+            <p class="section-kicker light" data-ko="몇 분이면 준비 완료" data-en="Ready in minutes">몇 분이면 준비 완료</p>
+            <h2>
+              <span data-ko="한 줄로 설치하고," data-en="Install with one line,">한 줄로 설치하고,</span><br />
+              <span data-ko="세 줄로 검색하세요." data-en="search with three.">세 줄로 검색하세요.</span>
+            </h2>
+            <p
+              data-ko="Dart와 Flutter 어디서든 같은 API를 사용합니다. 네트워크 요청도, 별도 인덱스도 필요 없어요."
+              data-en="Use the same API in Dart and Flutter. No network requests or separate index required."
+            >Dart와 Flutter 어디서든 같은 API를 사용합니다. 네트워크 요청도, 별도 인덱스도 필요 없어요.</p>
             <a
               href="https://pub.dev/packages/hangul_choseong_search"
               target="_blank"
               rel="noreferrer"
               class="text-link"
             >
-              pub.dev에서 문서 보기
+              <span data-ko="pub.dev에서 문서 보기" data-en="View documentation on pub.dev">pub.dev에서 문서 보기</span>
               <svg viewBox="0 0 20 20" aria-hidden="true"><path d="m7 4 6 6-6 6" /></svg>
             </a>
           </div>
@@ -383,12 +497,18 @@
                 <span></span><span></span><span></span>
               </div>
               <p>main.dart</p>
-              <button id="copy-code" type="button" aria-label="예제 코드 복사">
+              <button
+                id="copy-code"
+                type="button"
+                aria-label="예제 코드 복사"
+                data-ko-aria-label="예제 코드 복사"
+                data-en-aria-label="Copy example code"
+              >
                 <svg viewBox="0 0 20 20" aria-hidden="true">
                   <rect x="6.5" y="6.5" width="9" height="9" rx="2" />
                   <path d="M4.5 13.5h-1v-9a1 1 0 0 1 1-1h9v1" />
                 </svg>
-                <span>Copy</span>
+                <span data-ko="복사" data-en="Copy">복사</span>
               </button>
             </div>
             <pre><code id="quick-code"><span class="code-purple">import</span> <span class="code-green">'package:hangul_choseong_search/</span>
@@ -409,9 +529,15 @@
 
       <section class="final-cta section-shell">
         <div class="cta-mark" aria-hidden="true">ㅎ</div>
-        <p class="section-kicker">START SEARCHING</p>
-        <h2>기억은 흐릿해도,<br />검색은 정확하게.</h2>
-        <p>당신의 다음 Dart · Flutter 프로젝트에 더 나은 한글 검색 경험을 더하세요.</p>
+        <p class="section-kicker" data-ko="검색 시작하기" data-en="Start searching">검색 시작하기</p>
+        <h2>
+          <span data-ko="기억은 흐릿해도," data-en="Memory can be fuzzy.">기억은 흐릿해도,</span><br />
+          <span data-ko="검색은 정확하게." data-en="Search should be precise.">검색은 정확하게.</span>
+        </h2>
+        <p
+          data-ko="당신의 다음 Dart · Flutter 프로젝트에 더 나은 한글 검색 경험을 더하세요."
+          data-en="Add a better Korean search experience to your next Dart or Flutter project."
+        >당신의 다음 Dart · Flutter 프로젝트에 더 나은 한글 검색 경험을 더하세요.</p>
         <div class="cta-actions">
           <a
             class="button button-primary"
@@ -419,7 +545,7 @@
             target="_blank"
             rel="noreferrer"
           >
-            pub.dev에서 시작하기
+            <span data-ko="pub.dev에서 시작하기" data-en="Get started on pub.dev">pub.dev에서 시작하기</span>
             <svg viewBox="0 0 20 20" aria-hidden="true"><path d="m7 4 6 6-6 6" /></svg>
           </a>
           <a
@@ -428,7 +554,7 @@
             target="_blank"
             rel="noreferrer"
           >
-            GitHub 보기
+            <span data-ko="GitHub 보기" data-en="View on GitHub">GitHub 보기</span>
           </a>
         </div>
       </section>
@@ -439,7 +565,10 @@
         <span class="brand-mark small" aria-hidden="true">ㅎ</span>
         <span class="brand-name">hangul<span>_search</span></span>
       </a>
-      <p>Built for the Korean search experience.</p>
+      <p
+        data-ko="더 나은 한국어 검색 경험을 위해 만들었습니다."
+        data-en="Built for a better Korean search experience."
+      >더 나은 한국어 검색 경험을 위해 만들었습니다.</p>
       <div>
         <a href="https://pub.dev/packages/hangul_choseong_search">pub.dev</a>
         <a href="https://github.com/beomq/hangul_choseong_search_flutter">GitHub</a>
